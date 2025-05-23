@@ -1,0 +1,29 @@
+body {
+    padding-top: 20px;
+    background-color: #f8f9fa;
+}
+
+.jumbotron {
+    background-color: #ffffff;
+    padding: 2rem 2rem;
+    border-radius: 0.3rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.table-responsive {
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 0.3rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.form-container {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 0.3rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+footer {
+    margin-top: 200px;
+}
