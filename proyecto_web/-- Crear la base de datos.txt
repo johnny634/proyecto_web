@@ -1,0 +1,28 @@
+-- Crear la base de datos
+CREATE DATABASE IF NOT EXISTS desarrollo_web
+CHARACTER SET utf8mb4
+COLLATE utf8mb4_general_ci;
+
+-- Usar la base de datos
+USE desarrollo_web;
+
+-- Crear tabla de usuarios
+CREATE TABLE `users` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `username` VARCHAR(255) NOT NULL UNIQUE,
+  `password` VARCHAR(255) NOT NULL,
+  `email` VARCHAR(255) NOT NULL UNIQUE,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- Crear tabla de productos
+CREATE TABLE `productos` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(255) NOT NULL,
+  `descripcion` TEXT DEFAULT NULL,
+  `precio` FLOAT NOT NULL,
+  `cantidad` INT(11) NOT NULL,
+  `user_id` INT(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  FOREIGN KEY (`user_id`) REFERENCES `users`(`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
